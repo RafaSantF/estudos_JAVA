@@ -11,11 +11,11 @@ public class ConexaoDAO {
        Connection conn = null;
        
        try {
-           String url = "jdbc:mysql://localhost:3306/bancoteste?user=root&password=123456";
+           String url = "jdbc:mysql://localhost:3306/primeiro_programa_bd?user=root&password=123456";
            conn = DriverManager.getConnection(url);
            
        } catch (SQLException erro) {
-           JOptionPane.showMessageDialog(null,"ConexaoDAO " +  erro.getMessage());
+           JOptionPane.showMessageDialog(null,"ConexaoDAO" +  erro.getMessage());
        }
        return conn;
    } 
