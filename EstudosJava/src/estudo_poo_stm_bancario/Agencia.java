@@ -1,4 +1,4 @@
-package estudos_gerais;
+package estudo_poo_stm_bancario;
 
 import java.util.ArrayList;
 import java.util.List;

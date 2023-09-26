@@ -1,4 +1,4 @@
-package estudos_gerais;
+package estudo_poo_stm_bancario;
 
 public class Endereco {
   
