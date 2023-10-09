@@ -1,4 +1,4 @@
-package estudos;
+package gerenciador_tarefas;
 
 import java.util.ArrayList;
 import java.util.List;
