@@ -5,7 +5,7 @@ public class Automovel {
     private String tipo;
     private String modelo;
     private int ano;   
-    private double velocidade;
+    private float velocidade;
     private int carga;
     private double distancia;
     private int contagemAceleradas;
@@ -33,7 +33,7 @@ public class Automovel {
         return ano;
     }
     
-    public double getVelocidade(){
+    public float getVelocidade(){
         return this.velocidade;
     }
 
@@ -61,7 +61,7 @@ public class Automovel {
         this.ano = ano;
     }  
         
-    public void setVelocidade(double velocidade){
+    public void setVelocidade(float velocidade){
         this.velocidade = velocidade;
     }
 
@@ -77,7 +77,7 @@ public class Automovel {
         this.contagemAceleradas += 1;
     }
 
-    public void acelerar(int velocidade){
+    public void acelerar(float velocidade){
     }
     
     public void distancia(){
