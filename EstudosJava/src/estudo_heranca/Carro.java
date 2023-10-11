@@ -7,7 +7,7 @@ public class Carro extends Automovel{
         float quantidadeAtual = super.getCarga();
         float abastecido = quantidadeAtual + quantidadeAbastecida;
         super.setCarga(abastecido);
-        System.out.printf("O automóvel está com %f litros de combustível. \n", super.getCarga());
+        System.out.printf("O automóvel está com %.2f litros de combustível. \n", super.getCarga());
     }
     
     @Override
@@ -20,18 +20,16 @@ public class Carro extends Automovel{
 
             super.setVelocidade(velocidade);
             super.setContagemAceleradas();
-            int aceleradas = super.getContagemAceleradas();
 
-            float distancia = super.getVelocidade()/800 * aceleradas;
-            super.setDistancia(distancia);
+            float distancia = super.getVelocidade()/800;
+            super.setDistancia(super.getDistancia() + distancia);
 
             float consumo = distancia * 8;
             float quantidadeAtual = super.getCarga();
             super.setCarga(quantidadeAtual - consumo);
-            quantidadeAtual = super.getCarga();
 
-            System.out.printf("O automóvel está a %.2f km/h, e já percorreu %f km. \n", velocidade, distancia);
-            System.out.printf("O automóvel está com %f litros de combustível \n", quantidadeAtual);
+            System.out.printf("O automóvel está a %.2f km/h, e já percorreu %.2f km. \n", super.getVelocidade(), super.getDistancia());
+            System.out.printf("O automóvel está com %.2f litros de combustível \n", super.getCarga());
             if (super.getCarga() < 0){
                 System.out.println("O automóvel entrou na reserva de combustível.");
             }
