@@ -6,8 +6,8 @@ public class Automovel {
     private String modelo;
     private int ano;   
     private float velocidade;
-    private int carga;
-    private double distancia;
+    private float carga;
+    private float distancia;
     private int contagemAceleradas;
     
     public void imprimeInfo(){
@@ -37,11 +37,11 @@ public class Automovel {
         return this.velocidade;
     }
 
-    public int getCarga() {
+    public float getCarga() {
         return carga;
     }
 
-    public double getDistancia() {
+    public float getDistancia() {
         return distancia;
     }
 
@@ -65,11 +65,11 @@ public class Automovel {
         this.velocidade = velocidade;
     }
 
-    public void setCarga(int carga) {
+    public void setCarga(float carga) {
         this.carga = carga;
     }
 
-    public void setDistancia(double distancia) {
+    public void setDistancia(float distancia) {
         this.distancia = distancia;
     }
 
