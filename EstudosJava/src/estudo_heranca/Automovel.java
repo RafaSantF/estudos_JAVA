@@ -9,6 +9,13 @@ public class Automovel {
     private float carga;
     private float distancia;
     private int contagemAceleradas;
+    float fatorDesempenho;
+    int consumo;
+    
+    public Automovel (float fatorDesempenho, int consumo){
+        this. fatorDesempenho = fatorDesempenho;
+        this.consumo = consumo;
+    }
     
     public void imprimeInfo(){
         String formato = """
@@ -77,12 +84,31 @@ public class Automovel {
         this.contagemAceleradas += 1;
     }
 
-    public void acelerar(float velocidade){
+    public void acelerar(float pisadaAcelerador){
+        if (this.carga > 0){
+            float porcentagemPisada = pisadaAcelerador/100; 
+
+            this.velocidade += fatorDesempenho * porcentagemPisada;
+            this.contagemAceleradas += 1;
+
+            this.distancia += this.velocidade/800;
+            
+            float quantidadeAtual = this.carga;
+            this.carga = quantidadeAtual - (consumo * distancia);
+
+            System.out.printf("O automóvel está a %.2f km/h, e já percorreu %.2f km. Carga de combustível atual: %.2f litros\n", this.velocidade, this.distancia, this.carga);
+            if (this.carga < 0){
+                System.out.println("O automóvel entrou na reserva de combustível.");
+            }
+        } else {
+            System.out.println("O automóvel está sem combustível, favor abastecer.");
+        }
     }
     
-    public void distancia(){
+    public void abastecer(float quantidadeAbastecida){
+        this.carga += quantidadeAbastecida;
+        System.out.printf("O automóvel foi abastecido e está com %.2f litros de combustível. \n", this.carga);
     }
-
-    public void carga(){
-    }
+    
 }
+    
