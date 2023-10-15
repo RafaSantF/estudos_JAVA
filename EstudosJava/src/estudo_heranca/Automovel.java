@@ -12,8 +12,11 @@ public class Automovel {
     float fatorDesempenho;
     int consumo;
     
-    public Automovel (float fatorDesempenho, int consumo){
-        this. fatorDesempenho = fatorDesempenho;
+    public Automovel (String tipo, String modelo, int ano, float fatorDesempenho, int consumo){
+        this.tipo = tipo;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.fatorDesempenho = fatorDesempenho;
         this.consumo = consumo;
     }
     

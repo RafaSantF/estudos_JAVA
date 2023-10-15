@@ -3,8 +3,10 @@ package estudo_heranca;
 
 public class Carro extends Automovel{
 
-    public Carro(float fatorDesempenho, int consumo) {
-        super(fatorDesempenho, consumo);
+    public Carro(String tipo, String modelo, int ano, float fatorDesempenho, int consumo) {
+        super(tipo, modelo, ano, fatorDesempenho, consumo);
     }
         
+   
+    
 }
