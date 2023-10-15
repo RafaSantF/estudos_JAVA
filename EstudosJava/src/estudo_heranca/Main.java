@@ -5,26 +5,18 @@ public class Main {
 
     public static void main(String[] args) {
         
-        BicicletaMotorizada bike1 = new BicicletaMotorizada("Bike", "GasBike", 2023, 20, 2);
+        Carro carro1 = new Carro("Carro", "Fiat Argo", 2022, 50, 9);
+  
+        carro1.abastecer(0.8f);
         
-        bike1.imprimeInfo();
+        carro1.acelerar(100);
+        carro1.acelerar(50);
+        carro1.acelerar(10);
         
-        bike1.abastecer(5);
-        
-        bike1.acelerar(400);
-        bike1.acelerar(400);
-        bike1.acelerar(400);
-        bike1.acelerar(400);
-        bike1.acelerar(400);
-        bike1.acelerar(400);
-        
-        bike1.pedalar(10);
-        bike1.pedalar(10);
-        
-        // CONFIGURAR MÉTODO PEDALAR PARA FUNCIONAR SOMENTE SE VELOCIDADE FOR REDUZIDA PARA ???
-        // CRIAR DOIS MÉTODOS DISTINTOS PARA CARRO E MOTOCICLETA
-
-       
+        carro1.acelerar(-50);
+        carro1.acelerar(-30);
+        carro1.acelerar(30);
+           
 
       
     }

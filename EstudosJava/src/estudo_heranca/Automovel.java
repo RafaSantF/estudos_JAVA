@@ -88,7 +88,7 @@ public class Automovel {
     }
 
     public void acelerar(float pisadaAcelerador){
-        if (this.carga > 0){
+        if (this.carga > 0 || pisadaAcelerador < 0){
             float porcentagemPisada = pisadaAcelerador/100; 
 
             this.velocidade += fatorDesempenho * porcentagemPisada;
@@ -97,10 +97,11 @@ public class Automovel {
             this.distancia += this.velocidade/800;
             
             float quantidadeAtual = this.carga;
-            this.carga = quantidadeAtual - (consumo * distancia);
-
+            if (pisadaAcelerador > 0){
+                this.carga = quantidadeAtual - (consumo * distancia);
+            } 
             System.out.printf("O automóvel está a %.2f km/h, e já percorreu %.2f km. Carga de combustível atual: %.2f litros\n", this.velocidade, this.distancia, this.carga);
-            if (this.carga < 0){
+            if (this.carga < 0 && pisadaAcelerador > 0){
                 System.out.println("O automóvel entrou na reserva de combustível.");
             }
         } else {
