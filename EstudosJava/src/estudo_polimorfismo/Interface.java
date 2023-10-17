@@ -1,8 +1,9 @@
 package estudo_polimorfismo;
 
 
-public class Interface {
-
+public interface Interface {
     
+    public String retorna_texto();
+    public void imprimir();
     
 }
