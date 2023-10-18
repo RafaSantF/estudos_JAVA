@@ -14,8 +14,8 @@ public class Main {
         
         impressao.imprimir(cc2);
         
-        // O MÉTODO DA CLASSE QUE UTILIZA AS DUAS IMPLEMENTAÇÕES DEVE UTILIZAR O MESMO MÉTODO QUE HÁ EM CADA IMPLEMENTAÇÃO. NO CASO ACIMA O MÉTODO "recebe-texto".
-        // TANTO A CLASSE "Impressao" QUANTO AS IMPLEMENTAÇÕES "ClasseConcreta" E "ClasseConcreta2" UTILIZAM DO MÉTODO "retorna_texto".
+        // O MÉTODO DA CLASSE QUE UTILIZA AS DUAS IMPLEMENTAÇÕES DEVE UTILIZAR O MESMO MÉTODO QUE HÁ EM CADA IMPLEMENTAÇÃO. NO CASO ACIMA OS MÉTODO "recebe-texto" e "imprimir".
+        // TANTO A CLASSE "Impressao" QUANTO AS IMPLEMENTAÇÕES "ClasseConcreta" E "ClasseConcreta2" UTILIZAM DO MÉTODO "retorna_texto" E "imprimir".
         // DESSA FORMA, A INTERFACE TRAZ O SEGUINTE BENEFÍCIO:
         // UTILIZAR NA CLASSE "Main" UM MÉTODO QUE PODE RECEBER PARÂMETRO TANTO DO TIPO ClasseConcreta ou ClasseConcreta2
         
@@ -23,8 +23,14 @@ public class Main {
         // ABAIXO O TESTE COM A CLASSE ABSTRATA
         Interface abs = new ClasseHerdaAbstrata();
         
-        abs.imprimir();
+        abs.imprimir(); // IMPRIMINDO MÉTODO DA CLASSE FILHA
         System.out.println(abs.retorna_texto());
+        
+        // MÉTODO DEFAULT DA INTERFACE.
+        abs.metodoDefault();
+        
+        // MÉTODO DEFAULT COM PARÂMETRO. 
+        System.out.println(abs.metodoDafaultTeste(100));
         
     }
     
