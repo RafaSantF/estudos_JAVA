@@ -1,6 +1,5 @@
 package estudo_polimorfismo;
 
-
 public class Main {
 
     public static void main(String[] args) {
@@ -10,8 +9,8 @@ public class Main {
         ClasseConcreta2 cc2 = new ClasseConcreta2();
         
         Impressao impressao = new Impressao();
-        impressao.imprimir(cc);
         
+        impressao.imprimir(cc);
         impressao.imprimir(cc2);
         
         // O MÉTODO DA CLASSE QUE UTILIZA AS DUAS IMPLEMENTAÇÕES DEVE UTILIZAR O MESMO MÉTODO QUE HÁ EM CADA IMPLEMENTAÇÃO. NO CASO ACIMA OS MÉTODO "recebe-texto" e "imprimir".
