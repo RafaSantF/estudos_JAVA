@@ -38,8 +38,20 @@ public class PesquisaFilme {
         Gson gson = new Gson(); 
             // Para utilizar esta classe, foi feito o download o arquivo .jar em Maven Repository. O arquivo foi salvo na pasta deste projeto e posteriormente 
             // adicionado em Library. 
+            
+            Filme filme = gson.fromJson(response.body(), Filme.class);
+            
+        System.out.println(""); //pular linha
         
-        
+        String nomeFilme = filme.getNome();
+        String anoDeLancamento = filme.getAnoDeLancamento();
+        String diretor = filme.getDiretor();
+            
+        System.out.printf("""
+                          Nome: %s
+                          Ano de Lançamento: %s
+                          Diretor: %s
+                           """, nomeFilme, anoDeLancamento, diretor);
         
         
 
