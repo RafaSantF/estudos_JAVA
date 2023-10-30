@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 public class Filme {
     @SerializedName("Title")   
     private String nome;
-    @SerializedName("Year")
+    @SerializedName("time")
     private String anoDeLancamento;
     @SerializedName("Director")
     private String diretor;
